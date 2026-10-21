@@ -25,6 +25,10 @@ def index():
         </form>
     '''
 
+@app.route("/goodbye", methods=["GET"])
+def index():
+    return "<p>Goodbye!</p>"
+
 if __name__ == "__main__":
     import os
     app.run(debug=os.getenv('FLASK_DEBUG', 'False').lower() == 'true')
